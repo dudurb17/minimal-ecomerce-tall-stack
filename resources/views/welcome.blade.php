@@ -19,8 +19,7 @@
     <livewire:header />
     <livewire:hero-section />
     <livewire:product-section />
-
-
+    <livewire:footer />
 </body>
 
 </html>
