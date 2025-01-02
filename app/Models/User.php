@@ -21,6 +21,7 @@ class User extends AuthUser
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
