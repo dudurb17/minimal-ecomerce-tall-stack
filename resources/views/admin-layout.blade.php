@@ -136,7 +136,7 @@
 
                         <li><a wire:navigate
                                 class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm {{ Request::is('manage/categories') ? 'bg-gray-100' : '' }} text-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-600 dark:hover:text-neutral-300"
-                                href="/manage/categories">
+                                href="/categories">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor" class="size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round"

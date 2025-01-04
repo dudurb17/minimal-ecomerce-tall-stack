@@ -82,8 +82,9 @@
                                             </td>
                                             <td class="size-px whitespace-nowrap">
                                                 <div class="px-6 py-1.5">
-                                                    <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"
-                                                        href="#">
+                                                    <a wire:navigate
+                                                        class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"
+                                                        href="edit/{{ $category->id }}/category">
                                                         Edit
                                                     </a>
                                                 </div>
