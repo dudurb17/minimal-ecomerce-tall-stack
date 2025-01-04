@@ -3,6 +3,7 @@
 use App\Livewire\AddCategory;
 use App\Livewire\AddProductForm;
 use App\Livewire\AdminDashboard;
+use App\Livewire\EditProduct;
 use App\Livewire\ManageCategories;
 use App\Livewire\ManageOrders;
 use App\Livewire\ManageProduct;
@@ -28,5 +29,7 @@ Route::group(['middleware' => 'admin'], function () {
     Route::get('/manage/categories', ManageCategories::class);
 
     Route::get('/add/category', AddCategory::class);
+
+    Route::get('/edit/{id}/product', EditProduct::class);
 
 });
