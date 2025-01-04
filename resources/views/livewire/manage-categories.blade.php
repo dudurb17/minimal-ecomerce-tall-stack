@@ -91,7 +91,9 @@
                                             </td>
                                             <td class="size-px whitespace-nowrap">
                                                 <div class="px-6 py-1.5">
-                                                    <a class="inline-flex items-center gap-x-1 text-sm text-red-500 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"
+                                                    <a wire:navigate wire:click="delete({{ $category->id }})"
+                                                        wire:confirm.prompt="Are you sure?\n\nType DELETE to confirm|DELETE"
+                                                        class="inline-flex items-center gap-x-1 text-sm text-red-500 decoration-2 hover:underline focus:outline-none focus:underline font-medium dark:text-blue-500"
                                                         href="#">
                                                         Delete
                                                     </a>
