@@ -29,6 +29,14 @@ class ProductTable extends Component
 
     }
 
+    public function delete($id)
+    {
+        $product = Products::find($id);
+        $product->delete();
+
+        return $this->redirect('/products', navigate: true);
+    }
+
     public function render()
     {
         $current_url = url()->current();
