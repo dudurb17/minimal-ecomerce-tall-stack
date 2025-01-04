@@ -6,9 +6,15 @@ use Livewire\Component;
 
 class ItemCard extends Component
 {
+    public $product;
 
-    public function placeholder()
+    public function mount($product_details)
     {
+        $this->product = $product_details;
+    }
+
+    public function placeholder(
+    ) {
         return view('livewire.skeleton.item-skeleton');
 
     }

@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/product/details', ProductDetails::class);
+Route::get('/product/{product_id}/details', ProductDetails::class);
 
 Route::group(['middleware' => 'admin'], function () {
     Route::get('/admin/dashboard', AdminDashboard::class)->name('dashboard');

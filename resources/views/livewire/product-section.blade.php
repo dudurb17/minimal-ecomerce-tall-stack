@@ -2,14 +2,14 @@
     <h2 class='font-medium text-[20px] my-3'>
         Brand New
     </h2>
-    <livewire:product-listing />
+    <livewire:product-listing :category_id="2" :current_product_id="0" />
 
     <h2 class='font-medium text-[20px] my-3'>
-        Smartphones & laptops
+        Digital products
     </h2>
-    <livewire:product-listing />
+    <livewire:product-listing :category_id="3" :current_product_id="0" />
     <h2 class='font-medium text-[20px] my-3'>
-        Outfits
+        Fashion and Apparel
     </h2>
-    <livewire:product-listing />
+    <livewire:product-listing :category_id="5" :current_product_id="0" />
 </div>
