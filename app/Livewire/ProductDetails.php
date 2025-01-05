@@ -2,8 +2,10 @@
 
 namespace App\Livewire;
 
-use App\Models\Products;
 use Livewire\Component;
+use App\Models\Products;
+use App\Models\ShoppingCart;
+use Illuminate\Support\Facades\Auth;
 
 class ProductDetails extends Component
 {
@@ -14,6 +16,24 @@ class ProductDetails extends Component
     ) {
         $this->product = Products::find($product_id);
 
+    }
+    public function addToCart($productId)
+    {
+        $carItem = ShoppingCart::where('user_id', Auth::id())
+            ->where('product_id', $productId)
+            ->first();
+
+        if ($carItem) {
+            $carItem->quantity += 1;
+            $carItem->save();
+        } else {
+            ShoppingCart::create([
+                'user_id' => Auth::id(),
+                'product_id' => $productId,
+                'quantity' => 1
+            ]);
+        }
+        $this->dispatch('cartUpdate');
     }
     public function render()
     {
