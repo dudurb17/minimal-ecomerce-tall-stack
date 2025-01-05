@@ -17,7 +17,7 @@
                     </li>
 
                     <li>
-                        <a class="text-red-500 transition hover:text-red-500/75" href="#"> Explore More </a>
+                        <a class="text-red-500 transition hover:text-red-500/75" href="/all/products"> Explore More </a>
                     </li>
 
                     <li>
