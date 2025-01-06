@@ -93,7 +93,8 @@
                             href="/">
                             Continue Shopping
                         </a>
-                        <a href="#"
+                        <a wire:click.prevent="
+                        sendOrder({{ $total }})" href="#"
                             class="flex gap-3 items-center rounded bg-gray-700 px-5 py-3 text-sm text-gray-100 transition hover:bg-gray-600">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                 stroke-width="1.5" stroke="currentColor" class="size-6">

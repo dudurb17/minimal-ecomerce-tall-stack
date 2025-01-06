@@ -2,6 +2,9 @@
 
 namespace App\Livewire;
 
+use App\Models\Order;
+use App\Models\OrderProduct;
+use App\Models\Products;
 use Livewire\Component;
 use App\Models\ShoppingCart;
 use Illuminate\Support\Facades\Auth;
@@ -19,6 +22,31 @@ class ShoppingCartComponent extends Component
     protected $listeners = [
         'cartUpdated' => 'render',
     ];
+
+    public function sendOrder($total_price)
+    {
+
+        $order = new Order();
+
+        $order->user_id = Auth::id();
+        $order->total_price = $total_price;
+        $order->save();
+        foreach ($this->cartItems as $item) {
+            $order_product = new OrderProduct();
+            $order_product->order_id = $order->id;
+            $order_product->product_id = $item->product_id;
+            $order_product->quantity = $item->quantity;
+            $product = Products::find($item->product_id);
+            $order_product->price_uni = $product->price;
+            $order_product->save();
+        }
+
+        $posts = ShoppingCart::where('user_id', Auth::id());
+
+        $posts->delete();
+        return $this->redirect('/home', navigate: true);
+
+    }
     public function mount()
     {
         $this->cartItems = $this->getCartItems();
