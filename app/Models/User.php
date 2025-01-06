@@ -47,9 +47,8 @@ class User extends AuthUser
         ];
     }
 
-    public function user()
+    public function orders()
     {
-        return $this->belongsTo(Order::class);
+        return $this->hasMany(Order::class);
     }
-
 }
