@@ -46,4 +46,10 @@ class User extends AuthUser
             'password' => 'hashed',
         ];
     }
+
+    public function user()
+    {
+        return $this->belongsTo(Order::class);
+    }
+
 }
