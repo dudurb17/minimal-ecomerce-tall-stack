@@ -21,11 +21,11 @@
                     </li>
 
                     <li>
-                        <a class="text-red-500 transition hover:text-red-500/75" href="#"> About </a>
+                        <a class="text-red-500 transition hover:text-red-500/75" href="/about"> About </a>
                     </li>
 
                     <li>
-                        <a class="text-red-500 transition hover:text-red-500/75" href="#"> Contancts </a>
+                        <a class="text-red-500 transition hover:text-red-500/75" href="/contacts"> Contancts </a>
                     </li>
 
 
