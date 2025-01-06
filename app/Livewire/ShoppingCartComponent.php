@@ -44,7 +44,7 @@ class ShoppingCartComponent extends Component
         $posts = ShoppingCart::where('user_id', Auth::id());
 
         $posts->delete();
-        return $this->redirect('/home', navigate: true);
+        return $this->redirect('/', navigate: true);
 
     }
     public function mount()
